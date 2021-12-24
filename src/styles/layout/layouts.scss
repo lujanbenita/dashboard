@@ -1,0 +1,22 @@
+.layout-dasboard {
+  position: relative;
+  width: calc(100% - 220px);
+  min-height: 100vh;
+  padding: 20px 40px;
+  margin: 0 0 0 auto;
+  flex-wrap: wrap;
+
+  &.flex {
+    display: flex;
+  }
+
+  &__footer {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    left: 220px;
+    width: auto;
+    font-size: 13px;
+    text-align: center;
+  }
+}

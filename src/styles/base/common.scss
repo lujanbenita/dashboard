@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@300;400;500;600;700;800;900&display=swap");
+
+h2 {
+  width: 100%;
+}
+
+/* main {
+  min-height: 100vh;
+  font-family: "Noto Sans Display", Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--strong-text);
+  background: radial-gradient(farthest-side ellipse at 10% 0, #4A3367 20%, #3B1727);
+  background: radial-gradient(farthest-side ellipse at 10% 0, #334C67 20%, #17253B);
+} */
+
+b {
+  color: var(--strong-text);
+}
+
+a {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 2px;
+    background: #009688;
+  }
+}
+
+input {
+  padding: 5px 10px;
+  color: var(--green);
+  border-bottom: 1px solid white;
+  outline: none;
+
+  &:focus-visible {
+    color: var(--green);
+    outline: none;
+  }
+
+  &:-internal-autofill-selected {
+    color: var(--green) !important;
+  }
+}
+
+textarea {
+  outline: none;
+}
+
+.row {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+/* colors */
+
+.blue {
+  color: var(--blue);
+}
+
+.green {
+  color: var(--green);
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+.red {
+  color: var(--red);
+}
+
+.violet {
+  color: var(--violet);
+}
+
+/* Cards */
+
+.card {
+  padding: 25px;
+  margin: 15px;
+  overflow: hidden;
+  color: rgb(230 229 232);
+  background-color: rgb(40 44 52);
+  background-image: linear-gradient(rgb(255 255 255 / 5%), rgb(255 255 255 / 5%));
+  border-radius: 8px;
+  box-shadow: rgb(0 0 0 / 53%) 0 8px 9px -3px;
+  transition: box-shadow 300ms cubic-bezier(.4, 0, .2, 1) 0ms;
+}
+
+/* Size */
+
+.size-row-4 {
+  width: calc(32% - 14px);
+  margin-top: 20px;
+}
+
+.size-row-6 {
+  width: calc(49% - 20px);
+  margin-top: 20px;
+}
+
+.size-row-8 {
+  flex: 1 1;
+}
+
+.size-row-8-auto {
+  flex: 1 1 auto;
+}
+
+.size-row-12 {
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media (max-width: 1500px) {
+
+  .size-row-2 {
+    width: calc(33.333333334% - 14px);
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .size-row-6 {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .size-row-2 {
+    width: calc(50% - 14px);
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .size-row-2 {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* Components */
+
+.title-card {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.paragraph-card {
+  margin-bottom: 25px;
+  color: var(--text);
+}

@@ -1,0 +1,16 @@
+.card-weather-24h {
+
+  button {
+    position: relative;
+    min-height: auto;
+    padding: 6px 12px;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);
+    border: 0;
+    border-radius: 15px;
+    box-shadow: 0 3px 7px 0 rgb(0 0 0 / 20%);
+  }
+}

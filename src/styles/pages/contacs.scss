@@ -1,0 +1,146 @@
+.contacts {
+  display: flex;
+  width: 100%;
+
+  &__row {
+    display: flex;
+    align-items: center;
+  }
+
+  &__contact {
+    display: flex;
+    padding: 10px;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    cursor: pointer;
+
+    &:hover {
+      background: #2D435D;
+    }
+  }
+
+  &__sidebar {
+    width: 300px;
+    padding: 10px;
+    border-right: 1px solid white;
+
+    &-options {
+      padding: 10px;
+      color: var(--strong-text);
+      border-bottom: 1px solid;
+
+      div {
+        display: flex;
+        padding: 10px;
+        cursor: pointer;
+        align-items: center;
+
+        &:hover {
+          background: #2D435D;
+        }
+      }
+
+      svg {
+        margin-right: 5px;
+      }
+    }
+
+    &-contacts {
+      padding: 10px 0;
+    }
+  }
+
+  &__contact-info {
+    position: relative;
+    padding: 10px 40px;
+    flex: 1 1 auto;
+  }
+
+  &__contact-name {
+    font-weight: 600;
+  }
+
+  &__contact-position {
+    font-size: 13px;
+  }
+
+  &__container-img {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border: 2px solid white;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+    }
+
+    span {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      background: #0882DF;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__contact-content {
+    padding-left: 20px;
+  }
+
+  &__contact-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 58px;
+  }
+
+  &__info {
+    width: max-content;
+    padding: 30px 10px 10px;
+
+    button {
+      display: flex;
+      padding: 7px 17px;
+      margin: 25px 0 0 auto;
+      font-size: 16px;
+      font-weight: 600;
+      border: 0;
+      border-radius: 0;
+    }
+
+    & > div {
+      margin-bottom: 12px;
+    }
+
+    &-title {
+      width: 110px;
+      font-weight: 600;
+
+      &::after {
+        content: ":";
+        float: right;
+        padding-right: 7px;
+      }
+    }
+  }
+
+  .favorite {
+    fill: var(--green);
+  }
+
+  &__info-select {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: max-content;
+    height: max-content;
+    margin: auto;
+  }
+}

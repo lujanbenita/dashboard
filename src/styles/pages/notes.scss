@@ -1,0 +1,149 @@
+.notes {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+
+  h3 {
+    margin-bottom: 20px;
+  }
+
+  .row {
+    width: 50%;
+  }
+
+  &__post {
+    width: 100%;
+    padding: 20px;
+
+    textarea {
+      display: table;
+      width: 100%;
+      height: auto;
+      margin: auto;
+      font-size: 16px;
+      color: unset;
+      background: unset;
+      border: none;
+    }
+  }
+
+  textarea:focus {
+    outline: none;
+  }
+
+  &__simples {
+    display: flex;
+    width: 100%;
+  }
+
+  &__sidebar {
+    border-right: 1px solid white;
+  }
+
+  &__edition {
+    flex: 1 1 auto;
+    padding: 0 30px;
+
+    textarea {
+      width: 100%;
+      min-height: 120px;
+      padding: .375rem .75rem;
+      font-size: 13px;
+      font-size: 18px;
+      font-weight: 300;
+      background: transparent;
+      border: 1px solid #E9ECEF;
+      border-radius: 2px;
+      box-shadow: none;
+      transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+      background-clip: padding-box;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(0 0 0 / 10%);
+
+    &:hover {
+      background: #2D435D;
+    }
+  }
+
+  &__item-remove {
+    position: absolute;
+    right: 10px;
+    bottom: 4px;
+  }
+
+  &__item-title {
+    width: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    font-size: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  select {
+    padding: .375rem .75rem;
+    font-size: 13px;
+    font-size: 18px;
+    font-weight: 300;
+    background-color: transparent;
+    border: 1px solid #E9ECEF;
+    border-radius: 2px;
+    box-shadow: none;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    background-clip: padding-box;
+
+    option {
+      padding: 4px;
+      font-size: 18px;
+      color: var(--green);
+      background-color: transparent;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__color {
+    margin-bottom: 35px;
+
+    &-title {
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+  }
+
+  &__edition-note-title {
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+
+  .red {
+    fill: var(--red);
+  }
+
+  &__new-note {
+    padding: 10px 5px;
+    font-size: 18px;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(0 0 0 / 10%);
+
+    &:hover {
+      background: #2D435D;
+    }
+  }
+
+  &__list {
+
+    li {
+      width: 250px;
+      padding-right: 25px;
+    }
+  }
+}

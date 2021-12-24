@@ -1,0 +1,233 @@
+.crypto {
+  width: 100%;
+  margin-top: 20px;
+
+  &__head {
+    display: flex;
+    margin-bottom: 25px;
+    font-size: 30px;
+    flex-wrap: wrap;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__title {
+    margin: 0 10px 0 20px;
+  }
+
+  &__subtitle {
+    width: 100%;
+  }
+
+  &__id {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    margin: 0 20px;
+  }
+
+  &__rank {
+    width: 100%;
+    padding-left: 60px;
+    font-size: 16px;
+
+    .row & {
+      padding-left: 0;
+    }
+  }
+
+  &__sentiment {
+    display: flex;
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+
+    &-info {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    svg {
+      width: 100% !important;
+    }
+
+    .apex-bar {
+      width: 100% !important;
+      min-height: 35px !important;
+    }
+
+    .apexcharts-canvas {
+      width: 100% !important;
+      height: 30px !important;
+    }
+
+    .apexcharts-inner {
+      transform: translate(15px, 0) !important;
+    }
+  }
+
+  .card-crypto {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .size-row-8-auto {
+    flex: 0 1 auto;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .positive-icon {
+    transform: rotate(-90deg);
+  }
+
+  .negative-icon {
+    transform: rotate(90deg);
+  }
+
+  &__max-min {
+
+    svg {
+      margin-right: 6px;
+    }
+  }
+
+  table {
+    border: 2px solid var(--violet);
+    border-spacing: 0;
+
+    thead {
+      color: var(--blue);
+    }
+
+    td {
+      padding: 10px;
+      text-align: center;
+    }
+  }
+
+  &__breadcrumb {
+    margin-bottom: 25px;
+
+    span {
+      padding: 0 4px;
+      font-weight: 600;
+    }
+
+    &-base {
+      cursor: pointer;
+    }
+  }
+
+  &__main-chart {
+    margin: 55px 0;
+  }
+
+  &__chart {
+    margin-bottom: 30px;
+    border-radius: 3px;
+    box-shadow: rgb(0 0 0 / 53%) 0 2px 9px -3px;
+  }
+
+  .card {
+    padding: 20px;
+    background: none;
+    border-radius: 6px;
+    box-shadow: rgb(0 0 0 / 53%) 0 2px 9px -3px;
+  }
+}
+
+.crypto-main {
+  position: relative;
+
+  &__card {
+    display: flex;
+    height: 70px;
+    max-width: 700px;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    background: #4A4A4A;
+    border-radius: 3px;
+    box-shadow: rgb(0 0 0 / 53%) 0 8px 9px -3px;
+    transition: .4s;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+      background: #201E1E;
+      opacity: 60%;
+      transition: .3s;
+    }
+  }
+
+  &__card-info {
+    display: flex;
+    align-items: center;
+    width: 40%;
+  }
+
+  &__card-current {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+  }
+
+  &__card-img {
+    height: 30px;
+    margin: 0 20px 0 10px;
+  }
+
+  &__card-rank {
+    width: 48px;
+  }
+
+  &__card-price {
+    width: 190px;
+    text-align: right;
+  }
+
+  img {
+    width: 30px;
+  }
+
+  &__card-head {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    opacity: 60%;
+
+    &-price {
+      position: absolute;
+      right: 45px;
+    }
+
+    &-24h {
+      position: absolute;
+      right: 290px;
+    }
+
+    &-coin {
+      position: absolute;
+      left: 119px;
+    }
+  }
+}

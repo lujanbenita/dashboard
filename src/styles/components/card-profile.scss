@@ -1,0 +1,64 @@
+.card-profile {
+
+  &.size-row-12 {
+    padding: 0;
+  }
+
+  &__img {
+    width: 100%;
+    height: 320px;
+    background: url("https://images8.alphacoders.com/107/1079961.jpg");
+    background-size: cover;
+    background-position-y: center;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    justify-content: space-between;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__rrss {
+    display: flex;
+
+    img {
+      margin: 25px 20px;
+      cursor: pointer;
+    }
+  }
+
+  &__profile {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    left: 0;
+    width: 170px;
+    margin: auto;
+    text-align: center;
+  }
+
+  &__profile-img {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 10px;
+    background: url(https://i1.sndcdn.com/avatars-000534343299-yhl6ly-t500x500.jpg);
+    background-size: cover;
+    border: 3px solid #E91E63;
+    border-radius: 50%;
+  }
+
+  &__item {
+    margin: 25px;
+    text-align: center;
+  }
+
+  &__profile-name {
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,25 @@
+.card-covid {
+  text-align: center;
+
+  &__title {
+    margin-bottom: 4px;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__response {
+    margin-bottom: 14px;
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  select {
+    padding: 5px;
+    border: 0;
+  }
+
+  &__container-select {
+    text-align: left;
+  }
+}

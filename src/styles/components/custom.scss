@@ -1,0 +1,35 @@
+.custom {
+  position: absolute;
+  bottom: 10px;
+  left: 13px;
+
+  .MuiToggleButton-primary {
+    color: #E6E5E88F;
+  }
+
+  button {
+    padding: 5px 10px;
+    font-size: 9px;
+  }
+}
+
+.theme {
+  font-family: "Noto Sans Display", Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--strong-text);
+
+  &__blue {
+    background: radial-gradient(farthest-side ellipse at 10% 0, #334C67 20%, #17253B);
+  }
+
+  &__red {
+    background: radial-gradient(farthest-side ellipse at 10% 0, #4A3367 20%, #3B1727);
+  }
+
+  &__dark {
+    background: radial-gradient(farthest-side ellipse at 10% 0, #090909 20%, #070707);
+  }
+
+  &__green {
+    background: radial-gradient(farthest-side ellipse at 10% 0, #336B67 20%, #17493B);
+  }
+}
