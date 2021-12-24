@@ -9,6 +9,7 @@ Dashboard : WIP
 * Redux
 * Postcss
 * Apexcharts
+* Material UI
 * React Query
 * Redux thunk
 * Redux persist
@@ -19,6 +20,6 @@ Dashboard : WIP
 
 ### clone and run ###
 
-* git clone https://lujan82@bitbucket.org/lujan82/dashboard.git
+* git clone https://github.com/lujan82/dashboard
 * inside root 
 * install dependencies with : yarn
