@@ -26,7 +26,7 @@ const initialState = {
     },
   ],
   isCurrentDay: false,
-  theme: "blue",
+  theme: "theme__blue",
 }
 
 export const userReducer = (state = initialState, action) => {
