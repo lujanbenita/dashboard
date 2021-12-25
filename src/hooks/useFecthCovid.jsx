@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useState } from 'react';
 import { useQuery } from 'react-query';
 
 const COVID_API = import.meta.env.VITE_APP_COVID_API_KEY
@@ -16,6 +18,8 @@ const fetchCovidWorld = async () => {
 
 const UseFecthCovid = () => {
 
+  const [dataRegion, setDataRegion] = useState()
+
   const {data: dataCovid, isLoading: isLoadingCovid} = useQuery("covid", fetchCovid, {
     staleTime: 60000 * 60, // 1 hora de caché
     notifyOnChangePropsExclusions: ['isStale']
@@ -27,7 +31,12 @@ const UseFecthCovid = () => {
   })
 
   const isLoading = isLoadingCovid && isLoadingWorld
-  const dataRegion = dataCovid?.regions[0]
+
+  useEffect(() => {
+    if (dataCovid?.regions[0]) {
+      setDataRegion(dataCovid?.regions[0])
+    }
+  },[dataCovid?.regions[0]])
 
   const handleOnChange = (e) => {
     const res = dataCovid.regions.find(item => item.name === e.target.value)

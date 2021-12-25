@@ -4,3 +4,5 @@
 @import "vendor/_all.css";
 @import "pages/_all.css";
 @import "skeletons/_all.css";
+@import "atoms/_all.css";
+@import "molecules/_all.scss";

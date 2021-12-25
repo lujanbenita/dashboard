@@ -22,11 +22,10 @@ const Themes = () => {
     <div className='custom'>
       <ToggleButtonGroup
         color="primary"
-       // orientation="vertical"
         value={themeChoice}
         exclusive
         onChange={handleChange}
-        >
+      >
         <ToggleButton value="theme__blue">Blue</ToggleButton>
         <ToggleButton value="theme__red">Red</ToggleButton>
         <ToggleButton value="theme__dark">Dark</ToggleButton>
