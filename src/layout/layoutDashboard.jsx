@@ -1,4 +1,3 @@
-import React from 'react';
 
 const LayoutDashboard = ({children, className = "", title, footer = true}) => {
   return (
