@@ -166,16 +166,17 @@ const ChartRealTime = ({registerDate}) => {
 
   return (
     <div className="card-weather-24h  size-row-12">
+      <button onClick={() => setStacked(!stacked)}> Stacked type </button>
+      <button onClick={handleMarkers}> Markers </button>
+
       {series !== undefined &&
         <Chart
           options={options}
           series={series}
           type="line"
-          height="450"
+          height="350"
         />
       }
-      <button onClick={() => setStacked(!stacked)} > Stacked type </button>
-      <button onClick={handleMarkers} > Markers </button>
     </div>
   );
 };

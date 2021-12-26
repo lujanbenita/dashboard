@@ -8,6 +8,7 @@ const Home = () => {
       <h1>HOME</h1>
       <h2><b><i>work in progress</i></b></h2>
       <h2>This Dashboard is made with...</h2>
+      <img referrerPolicy="no-referrer-when-downgrade" src="https://matomo.valencia-web.com/matomo.php?idsite=4&amp;rec=1"  alt="" /> 
 
       <h3><a href="https://jestjs.io/">Jest</a></h3>
       <h3><a href="https://vitejs.dev/">Vite</a></h3>
@@ -24,7 +25,4 @@ const Home = () => {
   );
 };
 
-export default Home; 
-
-// TODO: https://www.codementor.io/projects/web/daily-sleep-tracker-web-app-byi4kpk5rt
-// TODO: https://www.codementor.io/projects/mobile/invoicing-and-payment-reminder-mobile-app-atx32o85yj
+export default Home;

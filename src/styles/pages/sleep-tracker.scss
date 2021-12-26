@@ -1,5 +1,11 @@
 .sleep-tracker {
 
+  &__donuts-chart {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+  }
+
   .apexcharts-tooltip {
     color: black;
   }
@@ -7,5 +13,7 @@
   .btn-modal {
     display: flex;
     margin: auto;
+    margin-top: 16px;
+    border: 1px solid var(--main-color);
   }
 }
