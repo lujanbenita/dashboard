@@ -16,6 +16,9 @@ const initialState = {
     studies: "Institute Of Developers",
     web: "www.clujan.eu",
     from: "Spain",
+    img: "https://i1.sndcdn.com/avatars-000534343299-yhl6ly-t500x500.jpg",
+    name: "Peter Parker",
+    position: "Frontend DEveloper",
   },
   post: "Today is gonna be the day...",
   notes: [

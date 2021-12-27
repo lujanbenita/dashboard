@@ -26,16 +26,27 @@ const Profile = () => {
   const dispatch = useDispatch()
   const profile = useSelector(state => state.user.profile)
 
-  const [open, setOpen] = useState(false);
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const [openUser, setOpenUser] = useState(false);
+  const [openProfile, setOpenProfile] = useState(false);
+  const { register: registerProfile, handleSubmit: handleSubmitProfile} = useForm();
+  const { register: registerUser, handleSubmit: handleSubmitUser} = useForm();
 
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleOpenUser = () => setOpenUser(true);
+  const handleCloseUser = () => setOpenUser(false);
+  const handleOpenProfile = () => setOpenProfile(true);
+  const handleCloseProfile = () => setOpenProfile(false);
 
-  const onSubmit = (data, e) => {
+  const onSubmitProfile = (data, e) => {
     e.preventDefault()
     dispatch(updateProfile(data))
-    setOpen(false)
+    setOpenProfile(false)
+  } 
+
+  const onSubmitUser = (data, e) => {
+    e.preventDefault()
+    const updateData = { ...profile, ...data }
+    dispatch(updateProfile(updateData))
+    setOpenUser(false)
   } 
   
   return (
@@ -47,9 +58,9 @@ const Profile = () => {
         <div className="card-profile__content">
 
           <div className="card-profile__profile">
-            <div className="card-profile__profile-img"></div>
-            <div className="card-profile__profile-name">Peter Parker</div>
-            <div className="card-profile__profile-position">Frontend Developer</div>
+            <div className="card-profile__profile-img" onClick={handleOpenUser} style={{backgroundImage: `url(${profile.img})`}}></div>
+            <div className="card-profile__profile-name">{profile.name}</div>
+            <div className="card-profile__profile-position">{profile.position}</div>
           </div>
 
           <div className="card-profile__container">
@@ -84,7 +95,7 @@ const Profile = () => {
           From <b>{profile.from}</b>
         </div>
         <AddCircleRoundedIcon
-          onClick={handleOpen}
+          onClick={handleOpenProfile}
           className="modal__add"
         />
       </div>
@@ -138,8 +149,8 @@ const Profile = () => {
       </div>
 
       <Modal
-        open={open}
-        onClose={handleClose}
+        open={openProfile}
+        onClose={handleCloseProfile}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
@@ -147,21 +158,42 @@ const Profile = () => {
           <div className="modal__head">
             <TitleCard className="modal__title"> Edit Introduction </TitleCard>
           </div>
-          {/*  "handleSubmit" will validate your inputs before invoking "onSubmit"  */}
-          <form id="form-introduction" onSubmit={handleSubmit(onSubmit)}>
+          {/*  "handleSubmit" will validate your inputs before invoking "Profile"  */}
+          <form id="form-introduction" onSubmit={handleSubmitProfile(onSubmitProfile)}>
             <textarea
               defaultValue={profile.introduction}
-              {...register("introduction")}
+              {...registerProfile("introduction")}
               placeholder="Introduction"
               rows="3"
             />
-            <input defaultValue={profile.studies} {...register("studies")} placeholder="Studies"/>
-            <input defaultValue={profile.web} {...register("web")} placeholder="Web"/>
-            <select name="gender" defaultValue={profile.from} {...register("from")}>
+            <input defaultValue={profile.studies} {...registerProfile("studies")} placeholder="Studies"/>
+            <input defaultValue={profile.web} {...registerProfile("web")} placeholder="Web"/>
+            <select name="gender" defaultValue={profile.from} {...registerProfile("from")}>
               <CountriesList />
             </select>
 
-            <input type="submit" />
+            <input type="submit" value="Send"/>
+          </form>
+        </Box>
+      </Modal>
+
+      <Modal
+        open={openUser}
+        onClose={handleCloseUser}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <div className="modal__head">
+            <TitleCard className="modal__title"> Edit User </TitleCard>
+          </div>
+
+          <form id="form-user" onSubmit={handleSubmitUser(onSubmitUser)}>
+            <input defaultValue={profile.img} {...registerUser("img")} placeholder="Url img"/>
+            <input defaultValue={profile.name} {...registerUser("name")} placeholder="Name"/>
+            <input defaultValue={profile.position} {...registerUser("position")} placeholder="Position"/>
+
+            <input type="submit" value="Send" />
           </form>
         </Box>
       </Modal>
