@@ -1,6 +1,22 @@
-import { IS_CURRENT_DAY, NEW_CONTACT, NEW_NOTE, REMOVE_CONTACT, REMOVE_NOTE, THEME, UPDATE_NOTE, UPDATE_POST } from "./userActionTypes"
+import {
+  IS_CURRENT_DAY,
+  NEW_CONTACT,
+  NEW_NOTE,
+  PROFILE,
+  REMOVE_CONTACT,
+  REMOVE_NOTE,
+  THEME,
+  UPDATE_NOTE,
+  UPDATE_POST,
+} from "./userActionTypes"
 
 const initialState = {
+  profile: {
+    introduction: "Hello, I am Peter Parker. I love making websites and graphics.",
+    studies: "Institute Of Developers",
+    web: "www.clujan.eu",
+    from: "Spain",
+  },
   post: "Today is gonna be the day...",
   notes: [
     {
@@ -77,6 +93,12 @@ export const userReducer = (state = initialState, action) => {
       return {
         ...state,
         theme: action.payload,
+      }
+
+    case PROFILE:
+      return {
+        ...state,
+        profile: action.payload,
       }
 
     default:

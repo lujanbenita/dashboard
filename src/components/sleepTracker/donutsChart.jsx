@@ -19,9 +19,6 @@ const getPercentage = (totalSleep, totalFreetime, totalWork ) => {
 }
 
 const getSevenLastDays = (data, days) => {
-  console.log('data', data);
-  console.log('data', data[0].data.length);
-
   let sleep = data[0].data.slice(-days)
   let work = data[1].data.slice(-days)
   let freetime = freeTimeCalculate(data).data.slice(-7)
@@ -61,7 +58,6 @@ const DonutsChart = ({registerDate,days}) => {
   
   const [refresh, setRefresh] = useState(false)
   const [series, setSeries] = useState(genSeries(DATA_DAILY_SLEEP_TRACKER, false, days))
-  console.log('DATA_DAILY_SLEEP_TRACKER', DATA_DAILY_SLEEP_TRACKER);
   
   useEffect(() => {
     if (registerDate !== null) {

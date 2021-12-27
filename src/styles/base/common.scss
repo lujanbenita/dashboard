@@ -13,6 +13,7 @@ h2 {
 } */
 
 b {
+  font-weight: 500;
   color: var(--strong-text);
 }
 
@@ -80,6 +81,7 @@ textarea {
 /* Cards */
 
 .card {
+  position: relative;
   padding: 25px;
   margin: 15px;
   overflow: hidden;

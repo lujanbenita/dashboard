@@ -1,0 +1,24 @@
+form {
+
+  &#form-introduction {
+    width: calc(100% - 60px);
+    margin: 0 auto 10px;
+    overflow: hidden;
+
+    input[type="submit"] {
+      color: #FFFFFF;
+      cursor: pointer;
+      background: #08C989;
+    }
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: var(--green);
+    border: 2px solid black;
+  }
+}

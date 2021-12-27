@@ -1,0 +1,17 @@
+.modal {
+
+  &__add {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+  }
+
+  &__head {
+    padding: 20px;
+    margin-bottom: 30px;
+    color: white;
+    text-transform: uppercase;
+    background: #08C989;
+  }
+}

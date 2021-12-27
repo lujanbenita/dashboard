@@ -20,6 +20,7 @@ const Home = () => {
       <h3><a href="https://react-query.tanstack.com/">React Query</a></h3>
       <h3><a href="https://github.com/reduxjs/redux-thunk">Redux thunk</a></h3>
       <h3><a href="https://github.com/rt2zz/redux-persist">Redux persist</a></h3>
+      <h3><a href="https://react-hook-form.com/"> React Hook Form</a></h3>
 
     </LayoutDashboard>
   );

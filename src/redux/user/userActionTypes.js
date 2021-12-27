@@ -11,3 +11,10 @@ export const UPDATE_POST = "UPDATE_POST"
 export const IS_CURRENT_DAY = "IS_CURRENT_DAY"
 
 export const THEME = "THEME"
+
+export const INTRODUCTION = "INTRODUCTION"
+export const STUDIED = "STUDIED"
+export const WEB = "WEB"
+export const FROM = "FROM"
+
+export const PROFILE = "PROFILE"
