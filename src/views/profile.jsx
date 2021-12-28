@@ -1,47 +1,35 @@
-import { useState } from "react";
 
-import { useSelector, useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 
 import LayoutDashboard from "../layout/layoutDashboard";
-import { updateProfile } from "../redux/user/userAction";
 import MainProfile from "../components/profile/mainProfile";
 import CardIntroduction from "../components/profile/cardIntroduction";
 import CardPhotos from "../components/profile/cardPhotos";
 import CardProjects from "../components/profile/cardProjects";
 import ModalProfile from "../components/profile/modalProfile";
 import ModalUser from "../components/profile/modalUser";
-
+import UseProfile from "../hooks/useProfile";
 
 const Profile = () => {
-  const dispatch = useDispatch()
-  const profile = useSelector(state => state.user.profile)
-
-  const [openUser, setOpenUser] = useState(false);
-  const [openProfile, setOpenProfile] = useState(false);
 
   const { register: registerProfile, handleSubmit: handleSubmitProfile} = useForm();
   const { register: registerUser, handleSubmit: handleSubmitUser} = useForm();
 
-  const handleOpenUser = () => setOpenUser(true);
-  const handleCloseUser = () => setOpenUser(false);
+  const {
+    profile,
+    open: openProfile,
+    handleOpen: handleOpenProfile,
+    handleClose: handleCloseProfile,
+    onSubmit: onSubmitProfile
+  } = UseProfile()
 
-  const handleOpenProfile = () => setOpenProfile(true);
-  const handleCloseProfile = () => setOpenProfile(false);
+  const {
+    open: openUser,
+    handleOpen: handleOpenUser,
+    handleClose: handleCloseUser,
+    onSubmit: onSubmitUser
+  } = UseProfile()
 
-  const onSubmitProfile = (data, e) => {
-    e.preventDefault()
-    dispatch(updateProfile(data))
-    setOpenProfile(false)
-  } 
-
-  const onSubmitUser = (data, e) => {
-    e.preventDefault()
-    const updateData = { ...profile, ...data }
-    dispatch(updateProfile(updateData))
-    setOpenUser(false)
-  } 
-  
   return (
     <LayoutDashboard className="flex" title={"PROFILE"}>
 

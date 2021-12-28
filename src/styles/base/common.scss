@@ -91,6 +91,12 @@ textarea {
   border-radius: 8px;
   box-shadow: rgb(0 0 0 / 53%) 0 8px 9px -3px;
   transition: box-shadow 300ms cubic-bezier(.4, 0, .2, 1) 0ms;
+
+  &_hover {
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 53%) 0 10px 10px -3px;
+    transition: .3s;
+  }
 }
 
 /* Size */
