@@ -19,7 +19,7 @@ const UseNotes = () => {
     })
 
     const res = notes.map(el => {
-      if (el.note === item.note) {
+      if (el.id === item.id) {
         el.noteType = e.target.value
         return el
       }
