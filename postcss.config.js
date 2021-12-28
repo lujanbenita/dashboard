@@ -7,6 +7,6 @@
 } */
 
 module.exports = {
-  map: true,
+  sourcemap: true,
   plugins: [require("postcss-nested"), require("precss")],
 }
