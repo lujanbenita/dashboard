@@ -31,7 +31,8 @@ const Profile = () => {
 
   const onSubmitProfile = (data, e) => {
     e.preventDefault()
-    dispatch(updateProfile(data))
+    const updateData = { ...profile, ...data }
+    dispatch(updateProfile(updateData))
     setOpenProfile(false)
   } 
 
