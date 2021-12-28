@@ -52,6 +52,12 @@
     background-size: cover;
     border: 3px solid #E91E63;
     border-radius: 50%;
+    transition: .3s;
+
+    &:hover {
+      border-color: #1EE98A;
+      transition: .3s;
+    }
   }
 
   &__item {
