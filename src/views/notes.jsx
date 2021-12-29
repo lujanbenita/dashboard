@@ -27,11 +27,11 @@ const Notes = () => {
               setNote={setNote}
             />
 
-          <NoteEdition
-            note={note}
-            handleSelect={handleSelect}
-            handleOnChangeNote={handleOnChangeNote}
-          />
+            <NoteEdition
+              note={note}
+              handleSelect={handleSelect}
+              handleOnChangeNote={handleOnChangeNote}
+            />
           </section>
 
       </div>
