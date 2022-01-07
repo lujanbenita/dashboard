@@ -24,7 +24,7 @@ export const currentSeason = () => {
     },
   ]
 
-  const season = seasonArray.filter(({ date }) => date <= currentDate).slice(-1)[0] || { name: "Winter" }
+  const season = seasonArray.filter(({ date }) => date <= currentDate).slice(-1)[0] || seasonArray[3]
 
   return season
 }
