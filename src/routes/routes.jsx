@@ -1,5 +1,4 @@
-import { Suspense } from "react";
-import { lazy } from "react";
+import { Suspense, lazy } from "react";
 
 import {
   BrowserRouter as Router,
@@ -22,6 +21,7 @@ const Contacts = lazy( () => import('../views/contacts'))
 const Post = lazy( () => import('../views/post'))
 const Pomodoro = lazy( () => import('../views/pomodoro'))
 const SleepTracker = lazy( () => import('../views/sleepTracker'))
+const TimeZone = lazy( () => import('../views/timeZone'))
 
 const Routes = () => {
 
@@ -65,6 +65,9 @@ const Routes = () => {
               <li className="sidebar__list-item">
                 <NavLink to="/sleep-tracker">Sleep Daily</NavLink>
               </li>
+              <li className="sidebar__list-item">
+                <NavLink to="/timezone">Time zone</NavLink>
+              </li>
           </ul>
           <Themes />
         </nav>
@@ -72,6 +75,9 @@ const Routes = () => {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          <Route path="/timezone">
+            <TimeZone />
+          </Route>
           <Route path="/sleep-tracker">
             <SleepTracker />
           </Route>

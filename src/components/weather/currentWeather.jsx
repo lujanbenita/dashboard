@@ -3,7 +3,6 @@ import { currentSeason } from '../../utils/currentSeason';
 const CurrentWeather = ({weatherData, apiClient}) => {
 
   const backgroundimage = currentSeason().url
-  console.log('backgroundimage', backgroundimage);
 
   return (
     <div className="card-weather card size-row-4" style={{backgroundImage: backgroundimage}} >

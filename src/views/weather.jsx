@@ -1,5 +1,4 @@
 import LayoutDashboard from '../layout/layoutDashboard';
-
 import CurrentWeather from '../components/weather/currentWeather';
 import Current24H from '../components/weather/current24H';
 import NextDays from '../components/weather/nextDays';
