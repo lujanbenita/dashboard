@@ -45,6 +45,9 @@ const SkeletonLayout = () => {
               <li className="sidebar__list-item">
                 <span>Time zone</span>
               </li>
+              <li className="sidebar__list-item">
+                <span>Wizard</span>
+              </li>
           </ul>
           <Themes />
         </nav>

@@ -39,7 +39,8 @@
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0",
     "sass": "^1.32.11",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@amatlash/vite-plugin-stylelint": "^1.1.1",

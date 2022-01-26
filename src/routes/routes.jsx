@@ -22,6 +22,7 @@ const Post = lazy( () => import('../views/post'))
 const Pomodoro = lazy( () => import('../views/pomodoro'))
 const SleepTracker = lazy( () => import('../views/sleepTracker'))
 const TimeZone = lazy( () => import('../views/timeZone'))
+const Wizard = lazy( () => import('../views/wizard'))
 
 const Routes = () => {
 
@@ -68,6 +69,9 @@ const Routes = () => {
               <li className="sidebar__list-item">
                 <NavLink to="/timezone">Time zone</NavLink>
               </li>
+              <li className="sidebar__list-item">
+                <NavLink to="/wizard">Wizard</NavLink>
+              </li>
           </ul>
           <Themes />
         </nav>
@@ -75,6 +79,9 @@ const Routes = () => {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          <Route path="/wizard">
+            <Wizard />
+          </Route>
           <Route path="/timezone">
             <TimeZone />
           </Route>
