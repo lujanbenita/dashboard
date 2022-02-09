@@ -15,7 +15,9 @@ const StepThreeFeedbackCreatePassword = ({ handleResetStep, cancelWizard }) => {
             <h2>¡Tu Password Manager ya está creada!</h2>
             <p>
               Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet. Amet sit
-              dolor ipsum Lorem{" "}
+              dolor ipsum Lorem Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet. Amet sit
+              dolor ipsum Lorem Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet. Amet sit
+              dolor ipsum Lorem
             </p>
           </>
         ) : (

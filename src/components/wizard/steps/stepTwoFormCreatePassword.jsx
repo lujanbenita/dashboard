@@ -2,8 +2,8 @@ import React from "react";
 import UseWizardCreatePassword from "../../../hooks/useWizardCreatePassword";
 
 const StepTwoFormCreatePassword = ({ cancelWizard, handleNextStep }) => {
-  const { password, isValidPassword, handleInputChange } =
-    UseWizardCreatePassword();
+
+  const { password, isValidPassword, handleInputChange } = UseWizardCreatePassword();
 
   return (
     <>

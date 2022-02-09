@@ -6,7 +6,7 @@ const SkeletonLayout = () => {
   return (
     <div className={`layout-dasboard skeleton-layout`}>
       <nav className="sidebar">
-          <h1>Dashboard </h1>
+        <h1>Dashboard </h1>
 
           <ul className="sidebar__list">
               <li className="sidebar__list-item">

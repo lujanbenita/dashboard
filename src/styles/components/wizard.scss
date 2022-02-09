@@ -1,6 +1,6 @@
 .wizard {
-  position: fixed;
-  top: 20px;
+  position: absolute;
+  top: 90px;
   right: 0;
   left: 0;
   width: calc(100% - 80px);
@@ -11,7 +11,7 @@
   &__steps {
     display: flex;
     padding: 20px 100px;
-    background-color: var(--background-dark);
+    background-color: #CCD5DA;
     justify-content: center;
     align-items: center;
   }
@@ -21,7 +21,7 @@
     width: 30px;
     padding: 5px;
     margin: 0 10px;
-    color: var(--white);
+    color: #FFFFFF;
     text-align: center;
     background: grey;
     border-radius: 50%;
@@ -72,7 +72,7 @@
   &__next-buttons {
     display: flex;
     padding: 20px 100px;
-    border-top: 2px solid var(--background-light);
+    border-top: 2px solid #CCD5DA;
     align-items: center;
     justify-content: space-between;
   }
@@ -85,7 +85,7 @@
 
       p {
         position: absolute;
-        bottom: 0;
+        bottom: 16px;
         font-size: 10px;
       }
     }
@@ -101,7 +101,60 @@
 
     input {
       padding: 8px 10px;
-      border: 1px solid var(--secondary-color);
+      border: 1px solid #CCD5DA;
     }
+  }
+}
+
+.wizard-container {
+
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+
+    img {
+      width: 170px;
+    }
+  }
+
+  h2 {
+    color: #002B45;
+  }
+
+  h3 {
+    color: #FF0049;
+  }
+
+  button {
+    cursor: pointer;
+    background: none;
+    border: 0;
+
+    &.disabled {
+      cursor: initial;
+      opacity: 60%;
+    }
+
+    &.btn {
+      padding: 12px 20px;
+      color: #FFFFFF;
+      background-color: #002B45;
+    }
+  }
+
+  p {
+    margin: 5px 0 12px;
+    color: #002B45;
+  }
+
+  label {
+    color: #000000;
+  }
+
+  .create-pass {
+    display: flex;
+    margin: 25px auto;
   }
 }

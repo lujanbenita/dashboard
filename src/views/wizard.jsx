@@ -17,15 +17,15 @@ const Wizard = () => {
     <LayoutDashboard title={"Wizard"}>
       <section className="wizard-container">
         <h1>
-          Bienvenid@ al wizard de la contraseña
+          Welcome to the wizard pass
           <img
             src={OpenbankLogo}
             className="App-header-logo"
             alt={"openbank-logo"}
           />
         </h1>
-        <button className="btn" onClick={handleCreatePassword}>
-          Crear contraseña
+        <button className="btn create-pass" onClick={handleCreatePassword}>
+          Create pass
         </button>
 
         {isWizardVisible && (
