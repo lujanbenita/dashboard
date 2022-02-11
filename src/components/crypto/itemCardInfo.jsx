@@ -11,7 +11,8 @@ const ItemCardInfo = ({ coin, setSelectedCoin }) => (
     </div>
     <div className='crypto-main__card-current'>
       <div className={Math.sign(coin.price_change_percentage_24h) === 1 ? "green" : "red"}>
-        {(coin.price_change_percentage_24h).toFixed(2)}%
+        {coin.price_change_percentage_24h !== null &&
+          (coin.price_change_percentage_24h).toFixed(2)}%
       </div>
       <div className='crypto-main__card-price'>{formatNumberThousands(coin.current_price)}€</div>
     </div>

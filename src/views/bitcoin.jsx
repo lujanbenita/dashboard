@@ -23,7 +23,6 @@ const Bitcoin = () => {
     setSelectedCoin,
   } = UseFetchCryptos()
   
-
   return (
     <LayoutDashboard title={"CRYPTOS"}>
 

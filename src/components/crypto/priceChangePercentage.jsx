@@ -1,6 +1,7 @@
 import TitleCard from "../common/titleCard";
 
 const PriceChangePercentage = ({dataCoin}) => {
+console.log('dataCoin', dataCoin);
 
   const signalNumber = (number) => {
     if(Math.sign(number) === 1 || Math.sign(number) === 0 ) return true 
@@ -23,21 +24,25 @@ const PriceChangePercentage = ({dataCoin}) => {
         </thead>
         <tbody>
           <tr>
-          <td className={signalNumber(dataCoin.market_data.price_change_percentage_1y) ? "green" : "red"}>
-            {(dataCoin.market_data.price_change_percentage_1y).toFixed(2)}%
-          </td>
-          <td className={signalNumber(dataCoin.market_data.price_change_percentage_30d) ? "green" : "red"}>
-            {(dataCoin.market_data.price_change_percentage_30d).toFixed(2)}%
-          </td>
-          <td className={signalNumber(dataCoin.market_data.price_change_percentage_7d) ? "green" : "red"}>
-            {(dataCoin.market_data.price_change_percentage_7d).toFixed(2)}%
-          </td>
-          <td className={signalNumber(dataCoin.market_data.price_change_percentage_24h) ? "green" : "red"}>
-            {(dataCoin.market_data.price_change_percentage_24h).toFixed(2)}%
-          </td>
-          <td className={signalNumber(dataCoin.market_data.price_change_percentage_1h_in_currency.eur) ? "green" : "red"}>
-            {(dataCoin.market_data.price_change_percentage_1h_in_currency.eur).toFixed(2)}%
-          </td>
+            {dataCoin.market_data.price_change_percentage_24h !== null &&
+            <>
+              <td className={signalNumber(dataCoin.market_data.price_change_percentage_1y) ? "green" : "red"}>
+                {(dataCoin.market_data.price_change_percentage_1y).toFixed(2)}%
+              </td>
+              <td className={signalNumber(dataCoin.market_data.price_change_percentage_30d) ? "green" : "red"}>
+                {(dataCoin.market_data.price_change_percentage_30d).toFixed(2)}%
+              </td>
+              <td className={signalNumber(dataCoin.market_data.price_change_percentage_7d) ? "green" : "red"}>
+                {(dataCoin.market_data.price_change_percentage_7d).toFixed(2)}%
+              </td>
+              <td className={signalNumber(dataCoin.market_data.price_change_percentage_24h) ? "green" : "red"}>
+                {(dataCoin.market_data.price_change_percentage_24h).toFixed(2)}%
+              </td>
+              <td className={signalNumber(dataCoin.market_data.price_change_percentage_1h_in_currency.eur) ? "green" : "red"}>
+                {(dataCoin.market_data.price_change_percentage_1h_in_currency.eur).toFixed(2)}%
+              </td>
+            </>
+          }
           </tr>
         </tbody>
       </table>
