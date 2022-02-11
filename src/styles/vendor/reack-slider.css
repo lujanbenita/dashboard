@@ -8,6 +8,11 @@
   -webkit-touch-callout: none;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
+
+  a {
+    display: initial !important;
+    width: inherit !important;
+  }
 }
 
 .slick-list {
@@ -68,6 +73,8 @@
 
 .slick-slide img {
   display: block;
+  display: inline-block;
+  width: 100%;
 }
 
 .slick-slide.slick-loading img {

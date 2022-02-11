@@ -12,7 +12,7 @@ const CardProjects = () => {
 
         <ProjectCard 
           title={"Shoes Store"}
-          text={"Different people have different taste, and various types of shoes. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."}
+          text={"Different people have different taste, and various types of shoes. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur..."}
           url={"https://shoes-store-demo.vercel.app/"}
           tags={"#Next #Redux #Stripe @MongoDb"}
           img={"project0.jpg"}
@@ -28,7 +28,7 @@ const CardProjects = () => {
 
         <ProjectCard 
           title={"Contact book app"}
-          text={"First project as backend. Create your contact book by the face. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."}
+          text={"First project as backend. Create your contact book by the face. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur..."}
           url={"https://agenda-node-crud.herokuapp.com/"}
           tags={"#node #Express #Mongodb #Mongoose #Handlebars #Tailwind"}
           img={"project2.jpg"}
