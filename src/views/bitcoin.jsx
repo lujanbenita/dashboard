@@ -17,6 +17,7 @@ const Bitcoin = () => {
   const {
     isLoading,
     mainData,
+   // metalsData,
     bitcoin,
     seriesData,
     selectedCoin,
