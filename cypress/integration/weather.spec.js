@@ -3,7 +3,7 @@
 describe("Weather ", () => {
   beforeEach(() => {
     cy.viewport(1520, 720)
-    cy.visit("http://localhost:3000/weather")
+    cy.visit("http://localhost:3010/weather")
   })
 
   it("init page", () => {

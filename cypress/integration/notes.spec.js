@@ -2,7 +2,7 @@
 
 describe("Notes ", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000/notes")
+    cy.visit("http://localhost:3010/notes")
   })
 
   it("init page", () => {

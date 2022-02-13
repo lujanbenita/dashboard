@@ -2,7 +2,7 @@
 
 describe("Pomodoro ", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000/pomodoro")
+    cy.visit("http://localhost:3010/pomodoro")
   })
 
   it("init page", () => {
