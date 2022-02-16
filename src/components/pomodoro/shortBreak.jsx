@@ -1,4 +1,3 @@
-import React from 'react';
 
 const ShortBreak = ({displayMessage, timeMin, timeSec}) => {
   return (

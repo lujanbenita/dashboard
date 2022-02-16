@@ -8,7 +8,6 @@ import WeatherAvgInfo from '../components/weather/weatherAvgInfo';
 import UseFetchWeather from '../hooks/useFetchWeather';
 import Loading from '../components/common/loading';
 
-
 const Weather = () => {
 
 // https://www.weatherapi.com/my/

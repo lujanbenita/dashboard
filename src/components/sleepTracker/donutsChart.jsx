@@ -19,6 +19,7 @@ const getPercentage = (totalSleep, totalFreetime, totalWork ) => {
 }
 
 const getSevenLastDays = (data, days) => {
+  console.log('data', data);
   let sleep = data[0].data.slice(-days)
   let work = data[1].data.slice(-days)
   let freetime = freeTimeCalculate(data).data.slice(-7)

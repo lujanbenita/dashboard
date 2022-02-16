@@ -1,7 +1,4 @@
-
-function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+import { numberWithCommas } from "../../utils/numberWithCommas";
 
 const InfoCoin = ({dataCoin}) => {
   return (

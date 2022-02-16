@@ -1,0 +1,108 @@
+.rgb {
+
+  h1 {
+    margin-bottom: 10px;
+    font-size: 50px;
+  }
+
+  &__header {
+    background: #2F6E80;
+
+    .rgb__container {
+      display: block;
+      padding: 25px 0 35px;
+      text-align: center;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    width: 720px;
+    margin: auto;
+  }
+
+  .red { color: red; }
+  .green { color: green; }
+  .blue { color: blue; }
+
+  .options {
+    padding: 16px;
+    background: #FFFFFF;
+  }
+
+  .options .container {
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  #reset {
+    font-weight: 700;
+    color: #383838;
+    cursor: pointer;
+  }
+
+  .dificult button {
+    padding: 0 5px;
+    margin: 0 12px;
+    font-weight: 700;
+    color: #383838;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+  }
+
+  input {
+    opacity: 0%;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  .items .rgb__container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 10px;
+  }
+
+  .item {
+    position: relative;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 35px;
+    cursor: pointer;
+    border: 2px solid #383838;
+    border-radius: 20px;
+    transition: .3s;
+    justify-content: center;
+    align-items: center;
+
+    .correct,
+    .incorrect {
+      position: absolute;
+      opacity: 100%;
+      transition: .3s;
+    }
+
+    span {
+      position: absolute;
+      bottom: 12px;
+      font-size: 18px;
+      font-weight: 600;
+      color: black;
+      opacity: 0%;
+      transition: .3s;
+    }
+
+    .opacity-off {
+      opacity: 100%;
+      transition: .3s;
+    }
+  }
+
+  .item img {
+    opacity: 0%;
+  }
+}

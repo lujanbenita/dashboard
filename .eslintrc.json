@@ -4,9 +4,8 @@
     "es2021": true
   },
   "extends": [
-    "standard",
-    "plugin:react/recommended"
-  ],
+    "standard"
+    ],
   "parserOptions": {
     "ecmaVersion": 2018,
     "ecmaFeatures": {

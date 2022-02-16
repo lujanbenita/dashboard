@@ -1,9 +1,6 @@
 import Countdown from 'react-countdown';
-import UsePomodoro from '../../hooks/usePomodoro';
 
 const PomodoroTime = ({ref }) => {
-  
-  
   
   return (
     <Countdown
