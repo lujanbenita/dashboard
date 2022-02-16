@@ -52,7 +52,7 @@ const SkeletonLayout = () => {
                 <span>News</span>
               </li>
               <li className="sidebar__list-item">
-                <span>Rgb game</span>
+                <span>Rgb Game</span>
               </li>
           </ul>
           <Themes />

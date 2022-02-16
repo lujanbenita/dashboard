@@ -75,7 +75,7 @@ const RgbGame = () => {
           </div>
         </div>
       </section>
-      <section className="options">
+      <section className="rgb__options">
         <div className="rgb__container">
           <div id="reset" onClick={()=> setRefresh(!refresh)}>NEW COLORS</div>
 
@@ -89,8 +89,8 @@ const RgbGame = () => {
         </div>
       </section>
 
-      <section className="items">
-        <div className="rgb__container" id="containeritems">
+      <section className="rgb__items">
+        <div className="rgb__container">
           {items.map((el,i) => (
             <div className="item"
             style={{ backgroundColor: `rgb(${el})` }}
