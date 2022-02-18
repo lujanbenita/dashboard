@@ -1,10 +1,9 @@
-import NoteEdition from '../components/notes/noteEdition';
-import SidebarNotes from '../components/notes/sidebarNotes';
-import UseNotes from '../hooks/useNotes';
-import LayoutDashboard from '../layout/layoutDashboard';
+import NoteEdition from '../components/notes/noteEdition'
+import SidebarNotes from '../components/notes/sidebarNotes'
+import UseNotes from '../hooks/useNotes'
+import LayoutDashboard from '../layout/layoutDashboard'
 
 const Notes = () => {
-
   const {
     notes,
     note,
@@ -12,31 +11,31 @@ const Notes = () => {
     setNotes,
     handleSelect,
     handleNewNote,
-    handleOnChangeNote,
+    handleOnChangeNote
   } = UseNotes()
 
   return (
-    <LayoutDashboard footer={false}  title={"NOTES"}>
-      <div className="notes">
-          <h3>Simple notes</h3>
-          <section className="notes__simples">
-            <SidebarNotes
-              handleNewNote={handleNewNote}
-              notes={notes}
-              setNotes={setNotes}
-              setNote={setNote}
-            />
+    <LayoutDashboard footer={false} title='NOTES'>
+      <div className='notes'>
+        <h3>Simple notes</h3>
+        <section className='notes__simples'>
+          <SidebarNotes
+            handleNewNote={handleNewNote}
+            notes={notes}
+            setNotes={setNotes}
+            setNote={setNote}
+          />
 
-            <NoteEdition
-              note={note}
-              handleSelect={handleSelect}
-              handleOnChangeNote={handleOnChangeNote}
-            />
-          </section>
+          <NoteEdition
+            note={note}
+            handleSelect={handleSelect}
+            handleOnChangeNote={handleOnChangeNote}
+          />
+        </section>
 
       </div>
     </LayoutDashboard>
-  );
-};
+  )
+}
 
-export default Notes;
+export default Notes

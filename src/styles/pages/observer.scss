@@ -1,0 +1,44 @@
+.observer {
+  padding: 0;
+
+  &-container {
+    transition: .4s;
+  }
+
+  &__section {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 300;
+  }
+
+  .opacity-off {
+    opacity: 0%;
+    transition: 1.4s;
+  }
+
+  .opacity-on {
+    opacity: 100%;
+    transition: 1.4s;
+  }
+
+  &__transition-title {
+    opacity: 100%;
+    transform: translateY(0);
+    transition: .4s;
+  }
+
+  &__transition-title-off {
+    opacity: 0%;
+    transform: translateY(180px);
+    transition: .4s;
+  }
+
+  &__breadcrumbs {
+    position: fixed;
+    top: 20px;
+    left: 240px;
+  }
+}

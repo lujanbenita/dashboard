@@ -78,7 +78,9 @@
     "vite-plugin-stylelint": "^1.0.4"
   },
   "standard": {
-    "env": [ "jest" ]
+    "env": [
+      "jest"
+    ]
   },
   "jest": {
     "roots": [
