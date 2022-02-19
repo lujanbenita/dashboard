@@ -15,22 +15,11 @@ const IntersectionObserver = () => {
   const [background, setBackground] = useState()
   const [breadcrumbs, setBreadcrumbs] = useState([])
 
-  const section1 = useInView({
-  })
-
-  const section2 = useInView({
-  })
-
-  const section3 = useInView({
-  })
-
-  const section4 = useInView({
-  })
-
-  const section5 = useInView({
-
-    delay: 200
-  })
+  const section1 = useInView({ delay: 300 })
+  const section2 = useInView({ delay: 300 })
+  const section3 = useInView({ delay: 300 })
+  const section4 = useInView({ delay: 300 })
+  const section5 = useInView({ delay: 300 })
 
   useEffect(() => {
     if (section1.inView) {
@@ -62,19 +51,19 @@ const IntersectionObserver = () => {
       </div>
       <div className='observer-container' style={{ backgroundColor: background }}>
         <section className='observer__section'>
-          <div ref={section1.ref} className={section1.inView ? 'opacity-on' : 'opacity-off'}>Intersection Obeserver Api</div>
+          <div ref={section1.ref} className={section1.inView ? 'observer__transition-end' : 'opacity-off'}>Intersection Obeserver Api</div>
         </section>
         <section className='observer__section'>
-          <div ref={section2.ref} className={section2.inView ? 'opacity-on' : 'opacity-off'}>PINK</div>
+          <div ref={section2.ref} className={section2.inView ? 'observer__transition-end' : 'observer__transition-pink'}>PINK</div>
         </section>
         <section className='observer__section'>
-          <div ref={section3.ref} className={section3.inView ? 'opacity-on' : 'opacity-off'}>GREEN</div>
+          <div ref={section3.ref} className={section3.inView ? 'observer__transition-end' : 'observer__transition-green'}>GREEN</div>
         </section>
         <section className='observer__section'>
-          <div ref={section4.ref} className={section4.inView ? 'opacity-on' : 'opacity-off'}>RED</div>
+          <div ref={section4.ref} className={section4.inView ? 'observer__transition-end' : 'observer__transition-red'}>RED</div>
         </section>
         <section className='observer__section'>
-          <h3 ref={section5.ref} className={section5.inView ? 'observer__transition-title' : 'observer__transition-title-off'}>END</h3>
+          <h3 ref={section5.ref} className={section5.inView ? 'observer__transition-end' : 'observer__transition-title'}>END</h3>
         </section>
       </div>
     </LayoutDashboard>
