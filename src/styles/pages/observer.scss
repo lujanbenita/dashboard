@@ -14,17 +14,8 @@
     font-weight: 300;
   }
 
-  /* .opacity-off {
-    opacity: 0%;
-    transition: 1.4s;
-  }
-
-  .opacity-on {
-    opacity: 100%;
-    transition: 1.4s;
-  } */
-
   &__transition-end {
+    font-weight: 300;
     color: #FFFFFF;
     opacity: 100%;
     transform: initial;
@@ -62,5 +53,111 @@
     position: fixed;
     top: 20px;
     left: 240px;
+  }
+
+  &__dots {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 230px;
+    width: 24px;
+    height: 110px;
+    margin: auto;
+
+    a {
+      position: relative;
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin: 0 5px;
+      cursor: pointer;
+      background: white;
+      border: 2px solid black;
+      border-radius: 50%;
+    }
+  }
+
+  a::after {
+    content: none;
+  }
+
+  .blue {
+    background: #2563EB;
+
+    &:hover::after {
+      content: "Blue";
+      position: absolute;
+      top: -2px;
+      right: -25px;
+      display: block;
+      width: auto;
+      font-size: 10px;
+      color: white;
+      background: transparent;
+    }
+  }
+
+  .pink {
+    background: #DB2777;
+
+    &:hover::after {
+      content: "Pink";
+      position: absolute;
+      top: -2px;
+      right: -25px;
+      display: block;
+      width: auto;
+      font-size: 10px;
+      color: white;
+      background: transparent;
+    }
+  }
+
+  .green {
+    background: #16A34A;
+
+    &:hover::after {
+      content: "Green";
+      position: absolute;
+      top: -2px;
+      right: -33px;
+      display: block;
+      width: auto;
+      font-size: 10px;
+      color: white;
+      background: transparent;
+    }
+  }
+
+  .red {
+    background: #DC2626;
+
+    &:hover::after {
+      content: "Red";
+      position: absolute;
+      top: -2px;
+      right: -25px;
+      display: block;
+      width: auto;
+      font-size: 10px;
+      color: white;
+      background: transparent;
+    }
+  }
+
+  .transparent {
+    background: transparent;
+
+    &:hover::after {
+      content: "End";
+      position: absolute;
+      top: -2px;
+      right: -25px;
+      display: block;
+      width: auto;
+      font-size: 10px;
+      color: white;
+      background: transparent;
+    }
   }
 }

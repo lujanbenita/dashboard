@@ -47,24 +47,31 @@ const IntersectionObserver = () => {
   return (
     <LayoutDashboard className='observer'>
       <div className='observer__breadcrumbs'>
-        # {breadcrumbs.map(el => el)}
+        # {breadcrumbs.map(el => <a key={el} href={`#${el.split(' ')[0]}`}>{el}</a>)}
       </div>
       <div className='observer-container' style={{ backgroundColor: background }}>
-        <section className='observer__section'>
+        <section id='Intersection' className='observer__section'>
           <div ref={section1.ref} className={section1.inView ? 'observer__transition-end' : 'opacity-off'}>Intersection Obeserver Api</div>
         </section>
-        <section className='observer__section'>
+        <section id='Pink' className='observer__section'>
           <div ref={section2.ref} className={section2.inView ? 'observer__transition-end' : 'observer__transition-pink'}>PINK</div>
         </section>
-        <section className='observer__section'>
+        <section id='Green' className='observer__section'>
           <div ref={section3.ref} className={section3.inView ? 'observer__transition-end' : 'observer__transition-green'}>GREEN</div>
         </section>
-        <section className='observer__section'>
+        <section id='Red' className='observer__section'>
           <div ref={section4.ref} className={section4.inView ? 'observer__transition-end' : 'observer__transition-red'}>RED</div>
         </section>
-        <section className='observer__section'>
+        <section id='END' className='observer__section'>
           <h3 ref={section5.ref} className={section5.inView ? 'observer__transition-end' : 'observer__transition-title'}>END</h3>
         </section>
+      </div>
+      <div className='observer__dots'>
+        <a className='blue' href='#Intersection' />
+        <a className='pink' href='#Pink' />
+        <a className='green' href='#Green' />
+        <a className='red' href='#Red' />
+        <a className='transparent' href='#END' />
       </div>
     </LayoutDashboard>
   )
