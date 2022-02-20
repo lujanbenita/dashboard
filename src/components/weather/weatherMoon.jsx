@@ -1,20 +1,19 @@
-import TitleCard from '../common/titleCard';
-import Chart from "react-apexcharts";
+import TitleCard from '../common/titleCard'
+import Chart from 'react-apexcharts'
 
-const WeatherMoon = ({weatherData}) => {
-
+const WeatherMoon = ({ weatherData }) => {
   const options = {
     chart: {
-      type: "radialBar",
+      type: 'radialBar'
     },
-    //colors: ["#20E647"],
-    colors: ["#08C989"],
+    // colors: ["#20E647"],
+    colors: ['#08C989'],
     plotOptions: {
       radialBar: {
         hollow: {
           margin: 0,
-          size: "60%",
-          background: "#293450"
+          size: '60%',
+          background: '#293450'
         },
         track: {
           dropShadow: {
@@ -28,45 +27,45 @@ const WeatherMoon = ({weatherData}) => {
         dataLabels: {
           name: {
             offsetY: -10,
-            color: "#E1435B",
-            fontSize: "14px"
+            color: '#E1435B',
+            fontSize: '14px'
           },
           value: {
-            color: "#E09E1E",
-            fontSize: "30px",
+            color: '#E09E1E',
+            fontSize: '30px',
             show: true
           }
         }
       }
     },
     fill: {
-      type: "gradient",
+      type: 'gradient',
       gradient: {
-        shade: "dark",
-        type: "vertical",
-        gradientToColors: ["#0882DF"],
+        shade: 'dark',
+        type: 'vertical',
+        gradientToColors: ['#0882DF'],
         stops: [0, 100]
       }
     },
     stroke: {
-      lineCap: "round"
+      lineCap: 'round'
     },
-    labels: ["Illumination"]
-  };
+    labels: ['Illumination']
+  }
 
   const series = [weatherData.forecast.forecastday[0].astro.moon_illumination]
-  
-  return (
-    <div className="card-weather card size-row-4">
-      <TitleCard>Moon</TitleCard> 
-        <Chart
-          options={options}
-          series={series}
-          type="radialBar"
-          height="100%"
-       />
-    </div>
-  );
-};
 
-export default WeatherMoon;
+  return (
+    <div className='card-weather card size-row-4'>
+      <TitleCard>Moon</TitleCard>
+      <Chart
+        options={options}
+        series={series}
+        type='radialBar'
+        height='100%'
+      />
+    </div>
+  )
+}
+
+export default WeatherMoon

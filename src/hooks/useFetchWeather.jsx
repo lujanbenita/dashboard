@@ -1,4 +1,4 @@
-import { useQuery } from 'react-query';
+import { useQuery } from 'react-query'
 
 const API_WEATHER = import.meta.env.VITE_APP_WEATHERAPI_API_KEY
 const API_IP = import.meta.env.VITE_APP_IPINFO_API_KEY
@@ -17,17 +17,16 @@ const fetchWeatherInfo = async (apiClient) => {
 }
 
 const UseFetchWeather = () => {
-
   const { data: apiClient, isLoading: isLoadingApiClient } = useQuery('ipInfo', fetchIpInfo, {
     staleTime: 60000 * 60, // 1 hora de caché
     notifyOnChangePropsExclusions: ['isStale']
   })
-  
-  const {data: weatherData, isLoading: isLoadingWeather} = useQuery(['weatherInfo', apiClient?.city], () => fetchWeatherInfo(apiClient.city), {
+
+  const { data: weatherData, isLoading: isLoadingWeather } = useQuery(['weatherInfo', apiClient?.city], () => fetchWeatherInfo(apiClient.city), {
     staleTime: 60000 * 15, // 15 min de caché
     notifyOnChangePropsExclusions: ['isStale']
   })
-  
+
   const isLoading = isLoadingApiClient && isLoadingWeather
 
   return {
@@ -35,6 +34,6 @@ const UseFetchWeather = () => {
     apiClient,
     isLoading
   }
-};
+}
 
-export default UseFetchWeather;
+export default UseFetchWeather

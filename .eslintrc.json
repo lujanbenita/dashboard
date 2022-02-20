@@ -3,6 +3,9 @@
     "browser": true,
     "es2021": true
   },
+  "globals": {
+    "fetch": false
+  },
   "extends": [
     "standard"
     ],

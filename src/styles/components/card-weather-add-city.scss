@@ -1,0 +1,33 @@
+.add-city {
+
+  &__header {
+    display: flex;
+  }
+
+  input {
+    display: block;
+    margin: 0 auto 18px;
+  }
+
+  button {
+    position: relative;
+    height: fit-content;
+    padding: 4px 8px;
+    font-size: 12px;
+    cursor: pointer;
+    background: linear-gradient(-135deg, #899FD4 0%, #A389D4 100%);
+    border: 0;
+    border-radius: 15px;
+    box-shadow: 0 3px 7px 0 rgb(0 0 0 / 20%);
+  }
+
+  .size-row-4 {
+    width: 100%;
+    width: calc(100% + 49px);
+    padding: 0;
+    margin: 0;
+    margin: auto;
+    transform: translateX(-24px);
+    box-shadow: none;
+  }
+}
