@@ -1,10 +1,14 @@
 import { currentSeason } from '../../utils/currentSeason'
 
 const CurrentWeather = ({ weatherData, apiClient }) => {
-  const backgroundimage = currentSeason().url
+  let backgroundImage = currentSeason().url
+
+  if (!apiClient) {
+    backgroundImage = ''
+  }
 
   return (
-    <div className='card-weather card size-row-4' style={{ backgroundImage: backgroundimage }}>
+    <div className='card-weather card size-row-4' style={{ backgroundImage: backgroundImage }}>
       {weatherData !== '' && <>
         <div className='card-weather__top'>
           <div className='card-weather__top--cloud'>
@@ -46,8 +50,9 @@ const CurrentWeather = ({ weatherData, apiClient }) => {
         </div>
 
         <div className='card-weather__location'>
-          {apiClient.city}{' '}
-          {apiClient.country}
+          {apiClient
+            ? `${apiClient.city} ${apiClient.country}`
+            : `${weatherData.location.name} ${weatherData.location.country}`}
         </div>
 
         <div className='card-weather__img--sky'>
@@ -102,7 +107,7 @@ const CurrentWeather = ({ weatherData, apiClient }) => {
           <div className='card-weather__duration-day--sunrise'>{weatherData.forecast.forecastday[0].astro.sunrise}</div>
           <div className='card-weather__duration-day--sunset'>{weatherData.forecast.forecastday[0].astro.sunset}</div>
         </div>
-      </>}
+                             </>}
     </div>
   )
 }
