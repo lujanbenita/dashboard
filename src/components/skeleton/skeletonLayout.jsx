@@ -57,6 +57,9 @@ const SkeletonLayout = () => {
           <li className='sidebar__list-item'>
             <span>Observer api</span>
           </li>
+          <li className='sidebar__list-item'>
+            <span>Quiz Game</span>
+          </li>
         </ul>
         <Themes />
       </nav>

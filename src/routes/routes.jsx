@@ -26,6 +26,7 @@ const Wizard = lazy(() => import('../views/wizard'))
 const News = lazy(() => import('../views/news'))
 const RgbGame = lazy(() => import('../views/rgbGame'))
 const IntersectionObserver = lazy(() => import('../views/intersectionObserver'))
+const QuizGame = lazy(() => import('../views/quizGame'))
 
 const Routes = () => {
   return (
@@ -83,6 +84,9 @@ const Routes = () => {
             <li className='sidebar__list-item'>
               <NavLink to='/intersection-observer'>Observer api</NavLink>
             </li>
+            <li className='sidebar__list-item'>
+              <NavLink to='/quiz-game'>Quiz Game</NavLink>
+            </li>
           </ul>
           <Themes />
         </nav>
@@ -90,6 +94,9 @@ const Routes = () => {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          <Route path='/quiz-game'>
+            <QuizGame />
+          </Route>
           <Route path='/intersection-observer'>
             <IntersectionObserver />
           </Route>
