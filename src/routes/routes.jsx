@@ -65,9 +65,9 @@ const Routes = () => {
             <li className='sidebar__list-item'>
               <NavLink to='/pomodoro'>Pomodoro</NavLink>
             </li>
-            <li className='sidebar__list-item'>
+           {/*  <li className='sidebar__list-item'>
               <NavLink to='/sleep-tracker'>Sleep Daily</NavLink>
-            </li>
+            </li> */}
             <li className='sidebar__list-item'>
               <NavLink to='/timezone'>Time zone</NavLink>
             </li>

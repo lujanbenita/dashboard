@@ -39,9 +39,9 @@ const SkeletonLayout = () => {
           <li className='sidebar__list-item'>
             <span>Pomodoro</span>
           </li>
-          <li className='sidebar__list-item'>
+          {/* <li className='sidebar__list-item'>
             <span>Sleep Daily</span>
-          </li>
+          </li> */}
           <li className='sidebar__list-item'>
             <span>Time zone</span>
           </li>
