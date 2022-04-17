@@ -124,10 +124,8 @@ const MainChart = ({dataCoin}) => {
   })
 
 
-  const series = [genSeriesPrices(dataCoin, "prices")]
+  // const series = [genSeriesPrices(dataCoin, "prices")]
 
-  
-  console.log('series', series);
   return (
     <div className="crypto__main-chart">
       <TitleCard title={"h4"}>last 90 days</TitleCard>

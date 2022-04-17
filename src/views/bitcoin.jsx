@@ -3,6 +3,7 @@ import Loading from '../components/common/loading';
 import UseFetchCryptos from '../hooks/useFetchCryptos';
 import RankMain from '../components/crypto/rankMain';
 import DetailCrypto from '../components/crypto/detailCrypto';
+import TreemapChartCryptos from '../components/crypto/TreemapChartCryptos';
 
 const Bitcoin = () => {
 
@@ -21,10 +22,18 @@ const Bitcoin = () => {
       {isLoading ? <Loading />
         :
         selectedCoin === undefined || selectedCoin === null ?
-        <RankMain
-          mainData={mainData}
-          setSelectedCoin={setSelectedCoin}
-        />
+        <>
+          <RankMain
+            mainData={mainData}
+            setSelectedCoin={setSelectedCoin}
+          />
+
+          {mainData !== undefined &&
+
+            <TreemapChartCryptos mainData={mainData}/>
+        
+          }
+          </>
           :
           bitcoin !== undefined && 
           <DetailCrypto 

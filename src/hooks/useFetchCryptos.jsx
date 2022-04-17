@@ -15,7 +15,7 @@ const UseFetchCryptos = () => {
     const fetching = async () => {
       setIsLoading(true)
   
-      const resCoins = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=solana%2C%20bitcoin%2Ccardano%2C%20ethereum%2Cpolkadot%2C%20dogecoin%2Cshiba-inu%2Cavalanche-2%2Calgorand%2Cavaterra&order=market_cap_desc&per_page=20&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C48h%2C7d`)
+      const resCoins = await fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&ids=solana%2C%20bitcoin%2Ccardano%2C%20ethereum%2Cpolkadot%2C%20dogecoin%2Cshiba-inu%2Cavalanche-2%2Calgorand&order=market_cap_desc&per_page=20&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C48h%2C7d`)
      // const resMetals = await fetch(`https://metals-api.com/api/latest?access_key=${API_METALS}`)
 
       const responseCoins = await resCoins.json()
