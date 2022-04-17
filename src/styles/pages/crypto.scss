@@ -150,6 +150,7 @@
 
 .crypto-main {
   position: relative;
+  padding: 50px 20px 20px;
 
   &__card {
     display: flex;
@@ -206,7 +207,7 @@
 
   &__card-head {
     position: absolute;
-    top: -25px;
+    top: 20px;
     right: 0;
     left: 0;
     display: flex;
