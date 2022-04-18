@@ -104,6 +104,10 @@
       border: 1px solid #CCD5DA;
     }
   }
+
+  input {
+    margin-right: 5px;
+  }
 }
 
 .wizard-container {
@@ -141,6 +145,7 @@
       padding: 12px 20px;
       color: #FFFFFF;
       background-color: #002B45;
+      box-shadow: rgb(0 0 0 / 53%) 2px 2px 5px 0px;
     }
   }
 

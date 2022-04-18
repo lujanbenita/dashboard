@@ -29,9 +29,7 @@ const Bitcoin = () => {
           />
 
           {mainData !== undefined &&
-
             <TreemapChartCryptos mainData={mainData}/>
-        
           }
           </>
           :

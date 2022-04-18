@@ -62,7 +62,7 @@ const TreemapChartCryptos = ({mainData}) => {
 
 	const genSeries = (data) => {
 		let dataSeries = data.map(item => {
-			return ({x: item.name, y: item.price_change_percentage_24h})
+			return ({x: (item.symbol).toUpperCase(), y: item.price_change_percentage_24h})
 		})
 
 		dataSeries = dataSeries.sort(function(a, b){

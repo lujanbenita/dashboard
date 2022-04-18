@@ -1,9 +1,12 @@
-import React from "react";
 import UseWizardCreatePassword from "../../../hooks/useWizardCreatePassword";
 
 const StepTwoFormCreatePassword = ({ cancelWizard, handleNextStep }) => {
 
-  const { password, isValidPassword, handleInputChange } = UseWizardCreatePassword();
+  const { password,
+     isValidPassword,
+      handleInputChange, 
+      infoTextPassword 
+    } = UseWizardCreatePassword();
 
   return (
     <>
@@ -25,7 +28,7 @@ const StepTwoFormCreatePassword = ({ cancelWizard, handleNextStep }) => {
                 onChange={handleInputChange}
                 placeholder="Contraseña"
               />
-              <p>La contraseña debe contener minimo 1 mayúscula y 1 numero</p>
+              <p>{infoTextPassword}</p>
             </div>
             <div className="form-group">
               <label>Confirm Password</label>
