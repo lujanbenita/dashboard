@@ -3,7 +3,7 @@ import Loading from '../components/common/loading';
 import UseFetchCryptos from '../hooks/useFetchCryptos';
 import RankMain from '../components/crypto/rankMain';
 import DetailCrypto from '../components/crypto/detailCrypto';
-import TreemapChartCryptos from '../components/crypto/TreemapChartCryptos';
+import TreemapChartCryptos from '../components/crypto/treemapChartCryptos';
 
 const Bitcoin = () => {
 
